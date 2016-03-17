@@ -1,0 +1,3 @@
+I've compared picture in the task and the Google's app (Gmail) and found one error only.
+
+1. Dividers must touch both borders of the screen.
