@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gsihome.reyst.y1t.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/scrollview_padding"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/tvSection"
+                android:tag="@string/sectionTag"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentTop="true"
+
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+
+                android:layout_marginEnd="@dimen/scrollview_padding"
+                android:layout_marginLeft="@dimen/scrollview_padding"
+
+                android:paddingTop="@dimen/text_part_vertical_padding"
+                android:paddingBottom="@dimen/text_part_vertical_padding"
+
+                android:text="@string/str_section_value"
+                android:textSize="@dimen/main_text_size"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:tag="@string/statusTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/tvSection"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:paddingLeft="@dimen/status_bg_horizontal_padding"
+                android:paddingRight="@dimen/status_bg_horizontal_padding"
+                android:paddingTop="@dimen/status_bg_vertical_padding"
+                android:paddingBottom="@dimen/status_bg_vertical_padding"
+
+                android:background="@drawable/background_job_status"
+
+                android:text="@string/str_in_work"
+                android:textColor="@color/statusColor"
+                android:textSize="@dimen/main_text_size"
+                />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_thick"
+                android:layout_below="@id/tvStatus"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+                android:background="@color/dividerColor" />
+
+            <TextView
+                android:id="@+id/tvCreated"
+                android:tag="@string/createdTag"
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                android:layout_below="@id/divider1"
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+
+                android:text="@string/str_created"
+                android:textColor="@color/leftTextColor"
+                android:textSize="@dimen/main_text_size" />
+
+            <TextView
+                android:id="@+id/tvValueCreated"
+                android:tag="@string/valueCreatedTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Other sample text"
+                android:textSize="@dimen/main_text_size"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:layout_alignBottom="@id/tvCreated"
+                />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_thick"
+                android:layout_below="@id/tvCreated"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+                android:background="@color/dividerColor" />
+
+            <TextView
+                android:id="@+id/tvRegistered"
+                android:tag="@string/registeredTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/divider2"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+
+                android:text="@string/str_registered"
+                android:textColor="@color/leftTextColor"
+                android:textSize="@dimen/main_text_size"
+                />
+
+            <TextView
+                android:id="@+id/tvValueRegistered"
+                android:tag="@string/valueRegisteredTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Other sample text"
+                android:textSize="@dimen/main_text_size"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:layout_alignBottom="@id/tvRegistered"
+                />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_thick"
+                android:layout_below="@id/tvRegistered"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+                android:background="@color/dividerColor"
+                />
+
+            <TextView
+                android:id="@+id/tvDeadline"
+                android:tag="@string/deadlineTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/divider3"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+
+                android:text="@string/str_deadline"
+                android:textColor="@color/leftTextColor"
+                android:textSize="@dimen/main_text_size"
+                />
+
+            <TextView
+                android:id="@+id/tvValueDeadline"
+                android:tag="@string/valueDeadlineTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Other sample text"
+                android:textSize="@dimen/main_text_size"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:layout_alignBottom="@id/tvDeadline"
+                />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_thick"
+                android:layout_below="@id/tvDeadline"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+                android:background="@color/dividerColor"
+                />
+
+            <TextView
+                android:id="@+id/tvResponsible"
+                android:tag="@string/responsibleTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/divider4"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+
+                android:text="@string/str_responsible"
+                android:textColor="@color/leftTextColor"
+                android:textSize="@dimen/main_text_size"
+                />
+
+            <TextView
+                android:id="@+id/tvValueResponsible"
+                android:tag="@string/valueResponsibleTag"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/str_my_wife"
+                android:textSize="@dimen/main_text_size"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:layout_alignBottom="@id/tvResponsible"
+                />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_thick"
+                android:layout_below="@id/tvResponsible"
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+                android:background="@color/dividerColor"
+                />
+
+            <TextView
+
+                android:id="@+id/tvDescription"
+                android:tag="@string/descriptionTag"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/divider5"
+
+                android:text="@string/str_description"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+
+                android:layout_marginTop="@dimen/text_part_vertical_padding"
+
+                android:layout_marginBottom="@dimen/text_part_vertical_padding"
+
+                android:textColor="@color/leftTextColor"
+                android:textSize="@dimen/main_text_size"
+
+                />
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/rvImages"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:layout_below="@id/tvDescription"
+
+                android:layout_marginLeft="@dimen/scrollview_padding"
+                android:layout_marginStart="@dimen/scrollview_padding"
+                android:layout_marginRight="@dimen/scrollview_padding"
+                android:layout_marginEnd="@dimen/scrollview_padding"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+    <!--<include layout="@layout/toolbar_layout" />-->
+    <!--android:paddingTop="?android:actionBarSize"-->

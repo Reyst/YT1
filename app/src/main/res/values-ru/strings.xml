@@ -1,0 +1,22 @@
+<resources>
+    <string name="sectionTag">Раздел</string>
+    <string name="statusTag">Статус</string>
+    <string name="str_created">Создано</string>
+    <string name="createdTag">Надпись "Создано"</string>
+    <string name="str_registered">Зарегистрировано</string>
+    <string name="valueCreatedTag">Создано</string>
+    <string name="registeredTag">Надпись "Зарегистрировано"</string>
+    <string name="valueRegisteredTag">Зарегистрировано</string>
+    <string name="deadlineTag">Надпись "Решить до"</string>
+    <string name="str_deadline">Решить до</string>
+    <string name="valueDeadlineTag">Решить до</string>
+    <string name="descriptionTag">Описание</string>
+    <string name="str_description">Срочно продаются куклы из собственной коллекции. Цена обсуждается. </string>
+    <string name="str_image">Изображение</string>
+    <string name="str_responsible">Ответственный</string>
+    <string name="str_my_wife">Моя жена</string>
+    <string name="valueResponsibleTag">Ответственный</string>
+    <string name="responsibleTag">Надпись "Ответственный"</string>
+    <string name="str_in_work">В работе</string>
+    <string name="str_section_value">Куклы</string>
+</resources>

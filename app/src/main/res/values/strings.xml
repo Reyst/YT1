@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">Yalantis 1st task</string>
+    <string name="sectionTag">Section</string>
+    <string name="statusTag">Status</string>
+    <string name="str_created">Created</string>
+    <string name="createdTag">Label for created</string>
+    <string name="str_registered">Registered</string>
+    <string name="valueCreatedTag">Created</string>
+    <string name="registeredTag">Label for registered</string>
+    <string name="valueRegisteredTag">Registered</string>
+    <string name="deadlineTag">Label for deadline</string>
+    <string name="str_deadline">Deadline</string>
+    <string name="valueDeadlineTag">Deadline</string>
+    <string name="descriptionTag">Description</string>
+    <string name="str_description">My wife are selling urgently dolls from the personal collection. Price may be discussed.</string>
+    <string name="emptyString" translatable="false" />
+    <string name="str_image">Image</string>
+    <string name="str_responsible">Responsible</string>
+    <string name="responsibleTag">Label for responsible</string>
+    <string name="valueResponsibleTag">Responsible</string>
+    <string name="str_my_wife">My wife</string>
+    <string name="str_in_work">In work</string>
+    <string name="str_section_value">Dolls</string>
+    <string name="task_name">SE-19521130</string>
+</resources>
