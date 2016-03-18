@@ -22,16 +22,16 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
     private Context mContext;
     private ArrayList<String> model;
 
-    private OnItemClickListener clickListener;
+    private OnItemClickListener clickListener; //[Comment] mOnclickListener
 
     private int mSideLength;
 
     public static class ImageViewHolder extends ViewHolder {
-        public ImageView imageView;
+        public ImageView imageView; //[Comment] Wrong visibility modifier
 
         public ImageViewHolder(View v) {
             super(v);
-            imageView = (ImageView) v.findViewById(R.id.ivImage);
+            imageView = (ImageView) v.findViewById(R.id.ivImage); //[Comment] Please don't use upper case in id names
         }
     }
 
@@ -47,7 +47,7 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
 
     public ImageGalleryAdapter(Context mContext, String[] model, OnItemClickListener listener) {
         this.mContext = mContext;
-        initModel(Arrays.asList(model));
+        initModel(Arrays.asList(model)); //[Comment] Why you convert array to array list? You can use array
         clickListener = listener;
     }
 
@@ -60,6 +60,7 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
     public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(mContext).inflate(R.layout.image_card, parent, false);
+        //[Comment] You can make space item decorator instead of layout params
 
         mSideLength = parent.getHeight();
 

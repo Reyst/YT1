@@ -158,6 +158,8 @@
                 android:layout_alignBottom="@id/tvRegistered"
                 />
 
+            <!-- [Comment] use tools:text for preview mode -->
+
             <View
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"

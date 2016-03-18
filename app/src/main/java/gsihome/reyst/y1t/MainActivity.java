@@ -14,6 +14,8 @@ import android.widget.Toast;
 import java.text.DateFormat;
 import java.util.Calendar;
 
+//[Comment] Wrong toolbar and status bar color
+//[Comment] First launch -> Wrong scroll view position. It should be max top
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ImageGalleryAdapter.OnItemClickListener {
 
     private RecyclerView mRecyclerView;
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 "http://img4.st.klumba-ua.com/img/used/2014/11/08/6260/l/6260139_8.jpg",
                 "http://img3.st.klumba-ua.com/img/used/2015/02/17/6802/l/6802488_3.jpg",
                 "http://img2.st.klumba-ua.com/img/used/2015/09/07/8037/l/8037167_4.jpg"
-
+        //[Comment] Looks like hardcode, put strings into <string-array />
         }, this);
 
         mRecyclerView.setAdapter(mAdapter);
