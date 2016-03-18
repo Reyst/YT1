@@ -20,7 +20,7 @@ import java.util.Collection;
 public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapter.ImageViewHolder> {
 
     private Context mContext;
-    private ArrayList<String> model;
+    private ArrayList<String> model; //[Comment] Use abstraction instead of realization
 
     private OnItemClickListener clickListener; //[Comment] mOnclickListener
 
