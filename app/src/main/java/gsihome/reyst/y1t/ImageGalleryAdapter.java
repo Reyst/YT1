@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by Reyst on 12.03.2016.
@@ -20,18 +21,20 @@ import java.util.Collection;
 public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapter.ImageViewHolder> {
 
     private Context mContext;
-    private ArrayList<String> model;
+    private List<String> model; // Used List, because I think that List better than Array
 
-    private OnItemClickListener clickListener;
+    private OnItemClickListener mOnClickListener;
 
     private int mSideLength;
 
     public static class ImageViewHolder extends ViewHolder {
-        public ImageView imageView;
+
+        // Visibility changed
+        private ImageView imageView;
 
         public ImageViewHolder(View v) {
             super(v);
-            imageView = (ImageView) v.findViewById(R.id.ivImage);
+            imageView = (ImageView) v.findViewById(R.id.iv_image);
         }
     }
 
@@ -39,16 +42,16 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
         void onClick(View view);
     }
 
-    public ImageGalleryAdapter(Context mContext, ArrayList<String> model, OnItemClickListener listener) {
+    public ImageGalleryAdapter(Context mContext, List<String> model, OnItemClickListener listener) {
         this.mContext = mContext;
         initModel(model);
-        clickListener = listener;
+        mOnClickListener = listener;
     }
 
     public ImageGalleryAdapter(Context mContext, String[] model, OnItemClickListener listener) {
         this.mContext = mContext;
-        initModel(Arrays.asList(model));
-        clickListener = listener;
+        initModel(Arrays.asList(model)); // Model was converted to List, because incoming param of method is Collection
+        mOnClickListener = listener;
     }
 
     private void initModel(Collection<String> data) {
@@ -81,7 +84,7 @@ public class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapte
             @Override
             public void onClick(View v) {
                 v.setTag(mContext.getResources().getString(R.string.str_image) + " #" + String.valueOf(position));
-                clickListener.onClick(v);
+                mOnClickListener.onClick(v);
             }
         });
 

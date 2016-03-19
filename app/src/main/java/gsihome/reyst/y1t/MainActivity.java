@@ -1,5 +1,6 @@
 package gsihome.reyst.y1t;
 
+import android.graphics.Rect;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,14 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        mTextViewValueCreated = (TextView) findViewById(R.id.tvValueCreated);
-        mTextViewValueRegistered = (TextView) findViewById(R.id.tvValueRegistered);
-        mTextViewValueDeadline = (TextView) findViewById(R.id.tvValueDeadline);
+        mTextViewValueCreated = (TextView) findViewById(R.id.tv_value_created);
+        mTextViewValueRegistered = (TextView) findViewById(R.id.tv_value_registered);
+        mTextViewValueDeadline = (TextView) findViewById(R.id.tv_value_deadline);
 
         initRecyclerView();
         initDates(Calendar.getInstance());
 
-        ViewGroup vg = (ViewGroup) findViewById(R.id.mainContainer);
+        ViewGroup vg = (ViewGroup) findViewById(R.id.main_container);
         int chCount = vg.getChildCount();
 
         for (int i = 0; i < chCount; i++) {
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initRecyclerView() {
-        mRecyclerView = (RecyclerView) findViewById(R.id.rvImages);
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv_images);
 
         ViewGroup.LayoutParams lp = mRecyclerView.getLayoutParams();
 
@@ -79,13 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new ImageGalleryAdapter(this, new String[]{
-                "http://img4.st.klumba-ua.com/img/used/2014/11/08/6260/l/6260139_9.jpg",
-                "http://img4.st.klumba-ua.com/img/used/2014/11/08/6260/l/6260139_8.jpg",
-                "http://img3.st.klumba-ua.com/img/used/2015/02/17/6802/l/6802488_3.jpg",
-                "http://img2.st.klumba-ua.com/img/used/2015/09/07/8037/l/8037167_4.jpg"
-
-        }, this);
+        mAdapter = new ImageGalleryAdapter(this, getResources().getStringArray(R.array.image_urls), this);
 
         mRecyclerView.setAdapter(mAdapter);
     }
@@ -105,3 +100,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 }
+

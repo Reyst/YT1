@@ -12,13 +12,15 @@
         android:fillViewport="false">
 
         <RelativeLayout
-            android:id="@+id/mainContainer"
+            android:id="@+id/main_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            >
 
             <TextView
 
-                android:id="@+id/tvSection"
+                android:id="@+id/tv_section"
                 android:tag="@string/sectionTag"
 
                 android:layout_width="match_parent"
@@ -44,13 +46,13 @@
                 />
 
             <TextView
-                android:id="@+id/tvStatus"
+                android:id="@+id/tv_status"
                 android:tag="@string/statusTag"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_below="@id/tvSection"
+                android:layout_below="@id/tv_section"
 
                 android:layout_marginLeft="@dimen/scrollview_padding"
                 android:layout_marginStart="@dimen/scrollview_padding"
@@ -73,12 +75,12 @@
                 android:id="@+id/divider1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_thick"
-                android:layout_below="@id/tvStatus"
+                android:layout_below="@id/tv_status"
                 android:layout_marginTop="@dimen/text_part_vertical_padding"
                 android:background="@color/dividerColor" />
 
             <TextView
-                android:id="@+id/tvCreated"
+                android:id="@+id/tv_created"
                 android:tag="@string/createdTag"
 
                 android:layout_height="wrap_content"
@@ -94,13 +96,13 @@
                 android:textSize="@dimen/main_text_size" />
 
             <TextView
-                android:id="@+id/tvValueCreated"
+                android:id="@+id/tv_value_created"
                 android:tag="@string/valueCreatedTag"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Other sample text"
+                tools:text="Other sample text"
                 android:textSize="@dimen/main_text_size"
 
                 android:layout_alignParentRight="true"
@@ -109,19 +111,19 @@
                 android:layout_marginRight="@dimen/scrollview_padding"
                 android:layout_marginEnd="@dimen/scrollview_padding"
 
-                android:layout_alignBottom="@id/tvCreated"
+                android:layout_alignBottom="@id/tv_created"
                 />
 
             <View
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_thick"
-                android:layout_below="@id/tvCreated"
+                android:layout_below="@id/tv_created"
                 android:layout_marginTop="@dimen/text_part_vertical_padding"
                 android:background="@color/dividerColor" />
 
             <TextView
-                android:id="@+id/tvRegistered"
+                android:id="@+id/tv_registered"
                 android:tag="@string/registeredTag"
 
                 android:layout_width="wrap_content"
@@ -140,13 +142,13 @@
                 />
 
             <TextView
-                android:id="@+id/tvValueRegistered"
+                android:id="@+id/tv_value_registered"
                 android:tag="@string/valueRegisteredTag"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Other sample text"
+                tools:text="Other sample text"
                 android:textSize="@dimen/main_text_size"
 
                 android:layout_alignParentRight="true"
@@ -155,20 +157,20 @@
                 android:layout_marginRight="@dimen/scrollview_padding"
                 android:layout_marginEnd="@dimen/scrollview_padding"
 
-                android:layout_alignBottom="@id/tvRegistered"
+                android:layout_alignBottom="@id/tv_registered"
                 />
 
             <View
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_thick"
-                android:layout_below="@id/tvRegistered"
+                android:layout_below="@id/tv_registered"
                 android:layout_marginTop="@dimen/text_part_vertical_padding"
                 android:background="@color/dividerColor"
                 />
 
             <TextView
-                android:id="@+id/tvDeadline"
+                android:id="@+id/tv_deadline"
                 android:tag="@string/deadlineTag"
 
                 android:layout_width="wrap_content"
@@ -187,13 +189,13 @@
                 />
 
             <TextView
-                android:id="@+id/tvValueDeadline"
+                android:id="@+id/tv_value_deadline"
                 android:tag="@string/valueDeadlineTag"
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Other sample text"
+                tools:text="Other sample text"
                 android:textSize="@dimen/main_text_size"
 
                 android:layout_alignParentRight="true"
@@ -202,20 +204,20 @@
                 android:layout_marginRight="@dimen/scrollview_padding"
                 android:layout_marginEnd="@dimen/scrollview_padding"
 
-                android:layout_alignBottom="@id/tvDeadline"
+                android:layout_alignBottom="@id/tv_deadline"
                 />
 
             <View
                 android:id="@+id/divider4"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_thick"
-                android:layout_below="@id/tvDeadline"
+                android:layout_below="@id/tv_deadline"
                 android:layout_marginTop="@dimen/text_part_vertical_padding"
                 android:background="@color/dividerColor"
                 />
 
             <TextView
-                android:id="@+id/tvResponsible"
+                android:id="@+id/tv_responsible"
                 android:tag="@string/responsibleTag"
 
                 android:layout_width="wrap_content"
@@ -234,7 +236,7 @@
                 />
 
             <TextView
-                android:id="@+id/tvValueResponsible"
+                android:id="@+id/tv_value_responsible"
                 android:tag="@string/valueResponsibleTag"
 
                 android:layout_width="wrap_content"
@@ -249,21 +251,21 @@
                 android:layout_marginRight="@dimen/scrollview_padding"
                 android:layout_marginEnd="@dimen/scrollview_padding"
 
-                android:layout_alignBottom="@id/tvResponsible"
+                android:layout_alignBottom="@id/tv_responsible"
                 />
 
             <View
                 android:id="@+id/divider5"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_thick"
-                android:layout_below="@id/tvResponsible"
+                android:layout_below="@id/tv_responsible"
                 android:layout_marginTop="@dimen/text_part_vertical_padding"
                 android:background="@color/dividerColor"
                 />
 
             <TextView
 
-                android:id="@+id/tvDescription"
+                android:id="@+id/tv_description"
                 android:tag="@string/descriptionTag"
 
                 android:layout_width="match_parent"
@@ -289,12 +291,12 @@
 
             <android.support.v7.widget.RecyclerView
 
-                android:id="@+id/rvImages"
+                android:id="@+id/rv_images"
 
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
 
-                android:layout_below="@id/tvDescription"
+                android:layout_below="@id/tv_description"
 
                 android:layout_marginLeft="@dimen/scrollview_padding"
                 android:layout_marginStart="@dimen/scrollview_padding"
@@ -312,6 +314,3 @@
 
 
 </RelativeLayout>
-
-    <!--<include layout="@layout/toolbar_layout" />-->
-    <!--android:paddingTop="?android:actionBarSize"-->
